@@ -1,0 +1,29 @@
+.navbar{
+    background-color: aqua;
+    font-family: calibri;
+    padding-left: 15PX;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+}
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: flex-end;
+    
+
+}
+.navdiv li{
+    list-style: none;
+    font-size: 18px;
+    margin-right: 25px;
+    font-weight: bold;
+    display: inline-block;
+}
+.navbar a:hover{
+    color: aliceblue;
+}
+
