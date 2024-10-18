@@ -1,7 +1,8 @@
+/*usage of child combinators*/
 .navbar{
     background-color: aqua;
     font-family: calibri;
-    padding-left: 15PX;
+    padding-left: 15px;
 }
 
 .navbar a{

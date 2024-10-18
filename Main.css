@@ -1,0 +1,20 @@
+.profilepic{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid;
+    margin-top: 20px;
+    margin-left : 35%;
+}
+.profile-info{
+    box-sizing: border-box;
+    display: flex;  
+}
+
+.profile-name{
+    font-family: arial black;
+    font-size: 30px;
+    margin-left: 30px;
+    margin-top: 85px;
+}
