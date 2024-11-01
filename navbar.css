@@ -1,3 +1,4 @@
+/* navigation bar */
 /*usage of child combinators*/
 .navbar{
     background-color: aqua;
@@ -27,4 +28,63 @@
 .navbar a:hover{
     color: aliceblue;
 }
+
+
+/* form */
+/*validity pseudo class*/
+.registration-form input:invalid{
+    background-color: rgb(223, 137, 137);
+}
+
+.registration-form input:valid{
+    background-color: rgb(249, 255, 249);
+}
+
+body .registration-form{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#71b7e6,rgb(179, 205, 128));
+}
+
+.registration-form .container{
+    max-width: 500px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.input-box input{
+    height: 25px;
+}
+
+form .button input{
+    height:30px;
+    width: 100px;
+    color: #fff;
+    background: linear-gradient(135deg,#71b7e6,rgb(179, 205, 128));
+    margin-left: 20%;
+}
+
+.button input:hover{
+    transform: scale(1.05);
+}
+
+.input-box{
+    margin: 10px;
+}
+
+.container a:visited{
+    color: purple;
+}
+
+
+/* Blog */
 
