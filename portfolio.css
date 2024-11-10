@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* navigation bar___ */
 
 /*usage of child combinators*/
@@ -26,9 +28,16 @@
     font-weight: bold;
     display: inline-block;
 }
+/* user action pseudo class */
 .navbar a:hover{
     color: aliceblue;
 }
+
+/* Using attribute selectors */
+.navbar a[target="_blank"] {
+    color: red; /* Links that open in a new tab turns red*/
+}
+
 
 
 /* form page___ */
@@ -46,6 +55,7 @@ body .registration-form{
     height: 100vh;
     justify-content: center;
     align-items: center;
+    /* gradient */
     background: linear-gradient(135deg,#71b7e6,rgb(179, 205, 128));
 }
 
@@ -56,10 +66,24 @@ body .registration-form{
     padding: 25px 30px;
     border-radius: 5px;
 }
+
+/* attribute selector for solid border */
+.registration-form input[type="email"]{
+    border: 2px solid #333;
+}
+
 .container .title{
     font-size: 25px;
     font-weight: 500;
     position: relative;
+}
+
+/* pseudo element */
+.container .title::before {
+    content: "📝 ";
+    font-size: 1.2em;
+    color: #007BFF;
+    margin-right: 5px;
 }
 
 .input-box input{
@@ -74,6 +98,7 @@ form .button input{
     margin-left: 20%;
 }
 
+/* transform */
 .button input:hover{
     transform: scale(1.05);
 }
@@ -108,9 +133,10 @@ form .button input{
     border: 1px solid #ddd;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);/*shadows*/
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-in;
 }
 
 .post:hover{
@@ -127,10 +153,12 @@ form .button input{
     font-size: 1.5em;
     margin-top: 10px;
     color: #333;
-    transition: colour 0.3ss;
+    transition: colour 0.3s;
 }
 
-.post-title:hover{
+/* transition */
+.post-title:hover{ 
+    /* text effect */
     color: #007BFF;
 }
 
@@ -235,7 +263,8 @@ form .button input{
 }
 
 body{
-     background-color: rgba(255, 255, 255, 0.715);
+    /* semi transparent clr */
+     background-color: rgba(255, 255, 255, 0.715);   
 }
 
 .about-image{
@@ -275,6 +304,89 @@ body{
     color: #333;
     margin-bottom: 20px;
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* media queries */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navdiv ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navdiv li {
+        margin: 10px 0;
+    }
+
+    /* Profile picture on the main page */
+    .profilepic {
+        height: 100px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-name {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    /* Social media buttons */
+    .button-links {
+        width: 100%;
+    }
+
+    /* About page adjustments */
+    .about-image {
+        width: 100%;
+        float: none;
+        margin-bottom: 20px;
+    }
+    .content p {
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    #heading {
+        font-size: 40px;
+    }
+
+    /* Blog page grid */
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Blog post adjustments */
+    .post-title {
+        font-size: 1.2em;
+    }
+    .post-description {
+        font-size: 0.9em;
+    }
+
+    /* Form page adjustments */
+    .registration-form .container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+
+
+
 
 
 
